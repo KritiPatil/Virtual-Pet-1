@@ -22,7 +22,7 @@ function setup() {
   dog.addImage(goodDog);
 
   foodStock = database.ref('Food');
-  foodStock.on("value", readStock, writeStock);
+  foodStock.on("value", readStock);
   
 }
 
@@ -41,7 +41,8 @@ background (46, 139, 87)
   textSize(30);
   fill ("black");
   stroke(4);
-  text("foodStock");
+  text("foodStock",+ foodS, 450, 10);
+  text ("Press up key to feed the dog.");
 
 }
 
