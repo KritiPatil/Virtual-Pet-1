@@ -42,7 +42,7 @@ background (46, 139, 87)
   fill ("black");
   stroke(4);
   text("foodStock",+ foodS, 450, 10);
-  text ("Press up key to feed the dog.");
+  text ("Press up key to feed the dog.", 450, 20);
 
 }
 
