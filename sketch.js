@@ -44,7 +44,7 @@ background (46, 139, 87)
   textSize(20);
   textFont('Georgia');
   stroke(4);
-  text("foodStock : ", 370, 20);
+  text("foodStock : " + foodS, 370, 20);
 
 }
 
@@ -55,7 +55,14 @@ function readStock(data) {
 }
 
 function writeStock(x) {
- database.ref('/').update({
+ 
+ if(x <= 0) {
+    x = 0
+ }else {
+   x = x-1
+ }
+ 
+  database.ref('/').update({
    Food:x
  })
 }
